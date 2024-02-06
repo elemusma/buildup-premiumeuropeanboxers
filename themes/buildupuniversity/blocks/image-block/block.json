@@ -1,0 +1,19 @@
+{
+    "name": "acf/image-block",
+    "title": "Image Block",
+    "description": "A custom image-block block.",
+    "style": [
+        "file:./image-block.css"
+    ],
+    "category": "formatting",
+    "icon": "admin-customizer",
+    "keywords": [
+        "image-block",
+        "quote"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "image-block.php"
+    },
+    "align": "full"
+}
