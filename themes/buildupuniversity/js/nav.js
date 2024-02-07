@@ -12,14 +12,14 @@ let logoSecondary = document.querySelector('#logo-secondary')
 window.addEventListener("scroll", parallaxEffect);
 
 function parallaxEffect() {
-    blankSpace.style.height = header.offsetHeight + "px";
-    header.classList.add('position-fixed');
-    header.classList.remove('position-relative');
+    // blankSpace.style.height = header.offsetHeight + "px";
+    // header.classList.add('position-fixed');
+    // header.classList.remove('position-relative');
 
     if (scrollY < 299) {
-        logoMain.style.width = "100%"
+        logoMain.style.width = "200px"
     } else if (scrollY > 300) {
-        logoMain.style.width = "75%"
+        logoMain.style.width = "150px"
     }
 }
 

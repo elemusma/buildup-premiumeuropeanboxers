@@ -33,13 +33,14 @@ ul.menu>li.menu-item-has-children {
 
 ul.menu>li>a {
     padding: 0px 9px;
-    color: #353535;
+    color: white;
     text-decoration: none;
     border-left: 1px solid var(--accent-primary);
-    /* font-weight: 200; */
-    /* text-transform: uppercase; */
-    /* font-size: 14px;
-    font-family: unset; */
+}
+
+ul#menu-menu-right,
+ul#menu-menu-left {
+    margin: 0;
 }
 
 @media screen and (min-width:1200px) {
