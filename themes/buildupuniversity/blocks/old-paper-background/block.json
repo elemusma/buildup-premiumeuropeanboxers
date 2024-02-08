@@ -1,0 +1,19 @@
+{
+    "name": "acf/old-paper-background",
+    "title": "Old Paper Background",
+    "description": "A custom old-paper-background block.",
+    "style": [
+        "file:./old-paper-background.css"
+    ],
+    "category": "formatting",
+    "icon": "admin-customizer",
+    "keywords": [
+        "old-paper-background",
+        "quote"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "old-paper-background.php"
+    },
+    "align": "full"
+}

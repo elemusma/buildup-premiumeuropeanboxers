@@ -34,7 +34,7 @@ if($image_or_gallery == 'Image') {
     $image = get_field('image_section');
     if($image) {
         echo wp_get_attachment_image($image['id'],'full','',[
-            'class'=>'w-100 h-auto' . get_field('image_section_classes'),
+            'class'=>'w-100 h-auto ' . get_field('image_section_class'),
             'style'=>'' . get_field('image_section_style')
         ]);
     }

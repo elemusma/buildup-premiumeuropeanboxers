@@ -14,16 +14,46 @@
     text-decoration: none;
 }
 
+.btn-main * {
+    transition: all .25s ease-in-out;
+}
+
 .btn-main {
-    background: var(--accent-primary);
-    padding: 10px 25px;
+    background: transparent;
+    padding: 2px;
     transition: all .25s ease-in-out;
     display: inline-block;
     text-decoration: none;
     color: white;
+    border: 1px solid black;
 }
 
-.btn-main:hover {
-    background: var(--accent-secondary);
+.btn-main span {
+    padding: 5px 35px;
+    display: block;
+}
+
+.btn-main:hover,
+.btn-main:hover span {
+    background: var(--accent-primary);
     text-decoration: none;
+}
+
+.btn-main.regular span {
+    background: white;
+    color: black;
+}
+
+.btn-main.regular:hover span {
+    background: var(--accent-primary);
+}
+
+a.btn-main.transparent {
+    background: transparent;
+}
+
+a.btn-main.white,
+a.btn-main.white * {
+    border-color: white !important;
+    color: white;
 }

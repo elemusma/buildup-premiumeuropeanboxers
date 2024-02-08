@@ -10,14 +10,17 @@ function register_acf_blocks() {
     register_block_type( __DIR__ . '/blocks/image-block' );
 	register_block_type( __DIR__ . '/blocks/content-and-image' );
 	register_block_type( __DIR__ . '/blocks/tabs' );
-    // register_block_type( __DIR__ . '/blocks/popup' );
-    // register_block_type( __DIR__ . '/blocks/gallery' );
+    register_block_type( __DIR__ . '/blocks/industries' );
+    register_block_type( __DIR__ . '/blocks/old-paper-background' );
+    register_block_type( __DIR__ . '/blocks/icons' );
+    register_block_type( __DIR__ . '/blocks/gallery' );
+    register_block_type( __DIR__ . '/blocks/process' );
     // register_block_type( __DIR__ . '/blocks/testimonials' );
     // register_block_type( __DIR__ . '/blocks/gallery-carousel' );
     // register_block_type( __DIR__ . '/blocks/tabs' );
 }
 
-function carlos_cabrera_stylesheets() {
+function premium_european_boxers_stylesheets() {
 wp_enqueue_style('style', get_stylesheet_uri() );
 
 wp_enqueue_style('layout', get_theme_file_uri('/css/sections/layout.css'));
@@ -55,9 +58,9 @@ wp_enqueue_style('blair-itc', get_theme_file_uri('/blair-itc/blair-itc.css'));
 // wp_enqueue_style('coromant-garamond', '//use.typekit.net/fqe2slt.css');
 
 }
-add_action('wp_enqueue_scripts', 'carlos_cabrera_stylesheets');
+add_action('wp_enqueue_scripts', 'premium_european_boxers_stylesheets');
 // for footer
-function carlos_cabrera_stylesheets_footer() {
+function premium_european_boxers_stylesheets_footer() {
 	// wp_enqueue_style('style-footer', get_theme_file_uri('/css/style-footer.css'));
 	// owl carousel
 	// wp_enqueue_style('owl.carousel.min', get_theme_file_uri('/owl-carousel/owl.carousel.min.css'));
@@ -93,7 +96,7 @@ function carlos_cabrera_stylesheets_footer() {
 		}
 	}
 	
-add_action('get_footer', 'carlos_cabrera_stylesheets_footer');
+add_action('get_footer', 'premium_european_boxers_stylesheets_footer');
 
 // loads enqueued javascript files deferred
 function mind_defer_scripts( $tag, $handle, $src ) {
@@ -117,7 +120,7 @@ function mind_defer_scripts( $tag, $handle, $src ) {
   } 
   add_filter( 'script_loader_tag', 'mind_defer_scripts', 10, 3 );
 
-function carlos_cabrera_menus() {
+function premium_european_boxers_menus() {
  register_nav_menus( array(
    'primary' => __( 'Primary' )));
 register_nav_menus( array(
@@ -127,7 +130,7 @@ register_nav_menus( array(
  add_theme_support('post-thumbnails');
 }
 
-add_action('after_setup_theme', 'carlos_cabrera_menus');
+add_action('after_setup_theme', 'premium_european_boxers_menus');
 
 if( function_exists('acf_add_options_page') ) {
 
@@ -206,7 +209,7 @@ function btn_shortcode( $atts, $content = null ) {
 	if (strpos($id, 'modal') !== false) {
 		return '<span class="btn-main ' . esc_attr($a['class']) . '" aria-label="' . esc_attr($a['aria-label']) . '" style="' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '" id="' . esc_attr($a['id']) . '">' . $content . '</span>';
 	} else {
-		return '<a class="btn-main ' . esc_attr($a['class']) . '" href="' . esc_attr($a['href']) . '" style="' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '" id="' . esc_attr($a['id']) . '">' . $content . '</a>';
+		return '<a class="btn-main ' . esc_attr($a['class']) . '" href="' . esc_attr($a['href']) . '" style="' . esc_attr($a['style']) . '" target="' . esc_attr($a['target']) . '" id="' . esc_attr($a['id']) . '"><span class="" style="border:1px solid black">' . $content . '</span></a>';
 	}
 	
 	// [button href="#" class="btn-main" style=""]Learn More[/button]
@@ -308,41 +311,41 @@ function my_phone_number() {
 }
 add_shortcode('phone_number', 'my_phone_number');
 
-function get_latest_videos_from_youtube_channel() {
-    // Load the Google Client Library
-    if (!class_exists('Google_Client')) {
-		require_once get_template_directory() . '/google-api-php-client--PHP7.4/vendor/autoload.php';
+// function get_latest_videos_from_youtube_channel() {
+//     // Load the Google Client Library
+//     if (!class_exists('Google_Client')) {
+// 		require_once get_template_directory() . '/google-api-php-client--PHP7.4/vendor/autoload.php';
 
-    }
+//     }
 
-    // Set up the client
-    $client = new Google_Client();
-    $client->setDeveloperKey($GLOBALS['youtube']);
-    $youtube = new Google_Service_YouTube($client);
+//     // Set up the client
+//     $client = new Google_Client();
+//     $client->setDeveloperKey($GLOBALS['youtube']);
+//     $youtube = new Google_Service_YouTube($client);
 
-    // Send a request to the API to get the latest 10 videos from a specific channel
-    $searchResponse = $youtube->search->listSearch('id,snippet', array(
-        'channelId' => 'UCNlzIzvhDCggZYg5DU-jQ5g', // AdamZwingler
-        'type' => 'video',
-        'order' => 'date',
-        'maxResults' => 4,
-    ));
+//     // Send a request to the API to get the latest 10 videos from a specific channel
+//     $searchResponse = $youtube->search->listSearch('id,snippet', array(
+//         'channelId' => 'UCNlzIzvhDCggZYg5DU-jQ5g', // AdamZwingler
+//         'type' => 'video',
+//         'order' => 'date',
+//         'maxResults' => 4,
+//     ));
 
-    // Print the results
-    ob_start();
-	echo '<div class="row">';
-    foreach ($searchResponse['items'] as $searchResult) {
-		echo '<div class="col-lg-6" style="padding-top:15px;padding-bottom:15px;">';
-        echo '<div class="video">';
-        // echo '<h3>' . $searchResult['snippet']['title'] . '</h3>';
-        // echo '<p>' . $searchResult['snippet']['description'] . '</p>';
-        echo '<iframe width="100%" height="315" src="https://www.youtube.com/embed/' . $searchResult['id']['videoId'] . '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
-			echo '</div>';
-			echo '</div>';
-	}
-	echo '</div>';
-	wp_enqueue_script('iframe-js',get_theme_file_uri('/js/iframe.js'));
-    return ob_get_clean();
-}
+//     // Print the results
+//     ob_start();
+// 	echo '<div class="row">';
+//     foreach ($searchResponse['items'] as $searchResult) {
+// 		echo '<div class="col-lg-6" style="padding-top:15px;padding-bottom:15px;">';
+//         echo '<div class="video">';
+//         // echo '<h3>' . $searchResult['snippet']['title'] . '</h3>';
+//         // echo '<p>' . $searchResult['snippet']['description'] . '</p>';
+//         echo '<iframe width="100%" height="315" src="https://www.youtube.com/embed/' . $searchResult['id']['videoId'] . '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+// 			echo '</div>';
+// 			echo '</div>';
+// 	}
+// 	echo '</div>';
+// 	wp_enqueue_script('iframe-js',get_theme_file_uri('/js/iframe.js'));
+//     return ob_get_clean();
+// }
 
-add_shortcode('youtube_videos', 'get_latest_videos_from_youtube_channel');
+// add_shortcode('youtube_videos', 'get_latest_videos_from_youtube_channel');

@@ -35,7 +35,8 @@ ul.menu>li>a {
     padding: 0px 9px;
     color: white;
     text-decoration: none;
-    border-left: 1px solid var(--accent-primary);
+    text-transform: uppercase;
+    /* border-left: 1px solid var(--accent-primary); */
 }
 
 ul#menu-menu-right,

@@ -1,12 +1,16 @@
 <?php
-echo '<section class="' . get_field('classes') . '" style="' . get_field('style') . '" id="' . get_field('id') . '">';
+echo '<section class="' . get_field('classes') . '" style="' . get_field('style') . '">';
+echo '<div class="position-absolute" style="top:-100px;" id="' . get_field('id') . '"></div>';
 echo '<div class="container-fluid">';
 echo '<div class="row">';
 
-if(have_rows('columns_repeater')): while(have_rows('columns_repeater')): the_row();
-echo '<div class="' . get_sub_field('column_classes') . '" data-aos="fade-up" style="padding:0;">';
-echo '<div class="bg-accent-green text-white text-center">';
-echo '<h3 class="" style="' . get_sub_field('column_style') . 'margin:0;padding: 15px 0px;">' . get_sub_field('title') . '</h3>';
+if(have_rows('columns_repeater')): 
+$columnsRepeater = 0;
+while(have_rows('columns_repeater')): the_row();
+$columnsRepeater++;
+echo '<div class="' . get_sub_field('column_classes') . '" data-aos="fade-up" data-aos-delay="' . $columnsRepeater . '00" style="padding:0;">';
+echo '<div class="bg-accent-secondary text-white text-center">';
+echo '<h3 class="" style="' . get_sub_field('column_style') . 'margin:0;padding: 15px 0px;font-style:italic;text-decoration:underline;">' . get_sub_field('title') . '</h3>';
 echo '</div>';
 echo '<div class="overflow-h" style="height: 250px;">';
 
@@ -18,7 +22,8 @@ echo wp_get_attachment_image($img['id'],'full','',[
 
 echo '</div>';
 echo '</div>';
-endwhile; endif;
+endwhile; 
+endif;
 
 
 
