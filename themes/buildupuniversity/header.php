@@ -55,9 +55,9 @@ wp_nav_menu(array(
     )); 
 echo '</div>';
 
-echo '<div class="col-md-2 col-4">';
+echo '<div class="col-md-2 col-4 text-center">';
 
-echo '<a href="' . home_url() . '" class="d-block position-md-absolute" style="top: -60px;left:50%;transform:translate(-50%, 0);">';
+echo '<a href="' . home_url() . '" class="d-block position-md-absolute" style="top:-20px;left:50%;transform:translate(-50%, 0);">';
 
 $logo = get_field('logo','options'); 
 if($logo){
