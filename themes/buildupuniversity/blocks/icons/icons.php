@@ -27,7 +27,7 @@ if ($iconsRepeater > 3) {
 $iconsRepeater++;
 
 $image = get_sub_field('image');
-echo '<div class="col-lg-3 col-md-4 col-12 text-center text-white" style="padding:5px;" data-aos="fade-up" data-aos-delay="' . $iconsRepeater . '00">';
+echo '<div class="col-lg-3 col-md-4 col-6 text-center text-white" style="padding:5px;" data-aos="fade-up" data-aos-delay="' . $iconsRepeater . '00">';
 echo '<div class="position-relative">';
 // echo '<a href="' . wp_get_attachment_image_url($image['id'], 'full') . '" data-lightbox="image-inventory" style="" class="d-block">';
 
@@ -47,7 +47,7 @@ echo '</div>';
 
 
 // echo '<div class="position-absolute text-white" style="top:50%;left:50%;transform:translate(-50%,-50%);">';
-echo '<span style="padding-top:40px;padding-bottom:60px;letter-spacing:.2em;" class="thin d-block">' . get_sub_field('title') . '</span>';
+echo '<span style="padding-top:40px;padding-bottom:60px;letter-spacing:.2em;" class="thin d-block cormorant-garamond-regular">' . get_sub_field('title') . '</span>';
 // echo '</div>';
 
 echo '</div>';

@@ -29,7 +29,7 @@ echo '>';
 if(get_field('body','options')) { the_field('body','options'); }
 if(get_field('body_code')) { the_field('body_code'); }
 // echo '<div class="blank-space"></div>';
-echo '<header class="position-fixed z-3 box-shadow w-100 text-white" style="top:0;left:0;padding:15px 0px;background:rgba(0,0,0,.5);">';
+echo '<header class="position-fixed z-3 box-shadow w-100 text-white" style="top:0;left:0;background:rgba(0,0,0,.5);">';
 
 echo '<div class="bg-accent h-100 position-absolute" style="
 top: 0;
@@ -63,7 +63,7 @@ $logo = get_field('logo','options');
 if($logo){
 echo wp_get_attachment_image($logo['id'],'full',"",[
     'class'=>'h-auto',
-    'style'=>'width:200px;transition:all 1s ease-in-out;',
+    'style'=>'width:100%;transition:all 1s ease-in-out;',
     'id'=>'logo-main'
 ]); 
 }
@@ -118,27 +118,31 @@ echo '</div>';
 // echo '</div>';
 
 echo '<div id="navMenuOverlay" class="position-fixed z-2"></div>';
-echo '<div class="col-lg-4 col-md-8 col-11 nav-items bg-white desktop-hidden" id="navItems">';
+echo '<div class="col-lg-4 col-md-8 col-11 nav-items bg-accent desktop-hidden" id="navItems">';
 
 echo '<div class="pt-5 pb-5">';
 echo '<div class="close-menu">';
 echo '<div>';
-echo '<span id="navMenuClose" class="close h2 text-gray" style="float:right;">X</span>';
+echo '<span id="navMenuClose" class="close h2 text-white" style="float:right;padding-top:25px;">X</span>';
 echo '</div>';
 echo '</div>';
 echo '<a href="' . home_url() . '">';
 
 $logo = get_field('logo','options'); 
 if($logo){
-echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','style'=>'max-width:250px;']);
+echo wp_get_attachment_image($logo['id'],'full',"",['class'=>'w-100 h-auto','style'=>'max-width:200px;']);
 }
 
 echo '</a>';
 echo '</div>';
 wp_nav_menu(array(
-'menu' => 'primary',
+'menu' => 'footer',
 'menu_class'=>'menu list-unstyled mb-0'
 )); 
+// wp_nav_menu(array(
+// 'menu' => 'Menu Left',
+// 'menu_class'=>'menu list-unstyled mb-0'
+// )); 
 echo '</div>'; // end of col for navigation
 
 

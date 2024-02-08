@@ -1,6 +1,6 @@
 <?php
 echo '<section class="position-relative ' . get_field('classes') . '" style="padding: 100px 0px;' . get_field('style') . '">';
-echo '<div class="position-absolute" style="top:-100px;" id="' . get_field('id') . '"></div>';
+echo '<div class="position-absolute" style="top:-50px;" id="' . get_field('id') . '"></div>';
 
 echo get_template_part('partials/bg-img');
 
@@ -13,17 +13,17 @@ if(have_rows('text_columns')):
 $textColumns=0;
 while(have_rows('text_columns')): the_row();
 $textColumns++;
-echo '<div class="text-center d-flex align-items-center justify-content-center ' . get_sub_field('column_classes') . '" data-aos="fade-up" data-aos-delay="' . $textColumns . '00" style="padding:0;' . get_sub_field('column_style') . '">';
+echo '<div class="text-center d-flex align-items-center justify-content-center ' . get_sub_field('column_classes') . '" data-aos="fade-up" data-aos-delay="' . $textColumns . '00" style="padding:50px 0px;' . get_sub_field('column_style') . '">';
 // echo '<div class="bg-accent-secondary text-white text-center">';
-echo '<span class="position-absolute h1 mb-0 text-columns-big-title" style="
+echo '<span class="position-absolute h1 mb-0 text-columns-big-title cormorant-garamond-regular-italic" style="
 opacity: .29;
 top: -50%;
 left: 50%;
-transform: translate(-60%,-20%);
+transform: translate(-60%,35%);
 font-size: 130px;
 color:var(--accent-primary);
 ">' . get_sub_field('big_title') . '</span>';
-echo '<h3 class="" style="letter-spacing:0.5em;">' . get_sub_field('small_title') . '</h3>';
+echo '<h3 class="raleway-regular" style="letter-spacing:0.5em;">' . get_sub_field('small_title') . '</h3>';
 // echo '</div>';
 // echo '<div class="overflow-h" style="height: 250px;">';
 

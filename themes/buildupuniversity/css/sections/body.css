@@ -27,6 +27,10 @@ body.nav-open {
   opacity: 1;
 }
 
+section {
+  overflow: hidden;
+}
+
 .bg-accent {
   background: var(--accent-primary);
 }

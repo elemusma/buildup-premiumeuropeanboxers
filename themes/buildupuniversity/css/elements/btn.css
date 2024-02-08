@@ -25,7 +25,7 @@
     display: inline-block;
     text-decoration: none;
     color: white;
-    border: 1px solid black;
+    border: 1px solid #c3c2c0;
 }
 
 .btn-main span {
@@ -54,6 +54,6 @@ a.btn-main.transparent {
 
 a.btn-main.white,
 a.btn-main.white * {
-    border-color: white !important;
+    border-color: #c3c2c0 !important;
     color: white;
 }

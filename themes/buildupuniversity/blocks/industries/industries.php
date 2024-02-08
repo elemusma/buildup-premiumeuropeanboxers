@@ -1,6 +1,6 @@
 <?php
 echo '<section class="' . get_field('classes') . '" style="' . get_field('style') . '">';
-echo '<div class="position-absolute" style="top:-100px;" id="' . get_field('id') . '"></div>';
+echo '<div class="position-absolute" style="top:-50px;" id="' . get_field('id') . '"></div>';
 echo '<div class="container-fluid">';
 echo '<div class="row">';
 

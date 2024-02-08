@@ -4,7 +4,7 @@ wp_enqueue_style('owl.carousel.min', get_theme_file_uri('/owl-carousel/owl.carou
 wp_enqueue_style('owl.theme.default', get_theme_file_uri('/owl-carousel/owl.theme.default.min.css'));
 
 echo '<section class="position-relative content-section ' . get_field('classes') . '" style="padding:50px 0;' . get_field('style') . '">';
-echo '<div class="position-absolute" style="top:-100px;" id="' . get_field('id') . '"></div>';
+echo '<div class="position-absolute" style="top:-50px;" id="' . get_field('id') . '"></div>';
 echo get_template_part('partials/bg-img');
 
 echo get_field('code_block');
@@ -28,7 +28,7 @@ echo '</div>';
 $image_or_gallery = get_field('image_or_gallery');
 
 echo '<div class="col-lg-6">';
-echo '<div data-aos="' . get_field('image_data_aos_animation') . '">';
+echo '<div data-aos="' . get_field('image_data_aos_animation') . '" data-aos-delay="300">';
 
 if($image_or_gallery == 'Image') {
     $image = get_field('image_section');

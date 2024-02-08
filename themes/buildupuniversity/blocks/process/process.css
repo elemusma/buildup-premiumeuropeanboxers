@@ -7,7 +7,7 @@
     opacity: 1;
 }
 
-.col-services-hover-content li {
+/* .col-services-hover-content li {
     position: relative;
     list-style: none;
     color: #2a3136;
@@ -25,7 +25,7 @@
     position: absolute;
     top: 5px;
     left: -30px;
-}
+} */
 
 @media only screen and (max-width:992px) {
     .col-services:nth-child(2) {

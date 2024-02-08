@@ -57,6 +57,13 @@ wp_enqueue_style('blair-itc', get_theme_file_uri('/blair-itc/blair-itc.css'));
 // wp_enqueue_style('aspira', get_theme_file_uri('/aspira-font/aspira-font.css'));
 // wp_enqueue_style('coromant-garamond', '//use.typekit.net/fqe2slt.css');
 
+?>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<?php
+wp_enqueue_style('cormorant-google-font', get_theme_file_uri('//fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap'));
+wp_enqueue_style('raleway-google-font', get_theme_file_uri('//fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap'));
+
 }
 add_action('wp_enqueue_scripts', 'premium_european_boxers_stylesheets');
 // for footer

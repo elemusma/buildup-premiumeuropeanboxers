@@ -8,6 +8,7 @@
 }
 
 .text-accent,
+.text-accent *,
 a {
   color: var(--accent-primary);
 }
@@ -92,7 +93,8 @@ strong {
 
 .arrows li:before {
   content: "";
-  background: url('https://insideoutcreative.io/wp-content/uploads/2023/02/Arrow-Right-Gold.png');
+  /* background: url('https://insideoutcreative.io/wp-content/uploads/2023/02/Arrow-Right-Gold.png'); */
+  background: url('https://buildupuniversity.com/wp-content/uploads/2024/02/Arrow-Right-Red.png');
   background-repeat: no-repeat;
   background-size: contain;
   width: 20px;
@@ -100,6 +102,12 @@ strong {
   position: absolute;
   top: 5px;
   left: -30px;
+}
+
+.arrows.white li:before {
+  background: url('https://buildupuniversity.com/wp-content/uploads/2024/02/Arrow-Right-White-Bullet-Points.png');
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 blockquote {
@@ -112,22 +120,111 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0px;
+  margin: 10px 0px;
+}
+
+h1,
+.h1 {
+  font-size: 4rem;
 }
 
 h2,
 .h2 {
-  font-family: 'blairitc_ttlight';
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
   font-size: 2.5rem;
-  font-weight: 300;
+  letter-spacing: .2em;
 }
 
+/* h3 {
+  font-size: 2rem;
+} */
+
 @media only screen and (max-width:767px) {
+
+  h1,
+  .h1 {
+    font-size: 2.75rem;
+  }
 
   h2,
   .h2 {
     font-size: 1.75rem;
   }
+}
+
+.cormorant-garamond-light {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.cormorant-garamond-light-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.cormorant-garamond-regular {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-garamond-regular-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.cormorant-garamond-medium {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.cormorant-garamond-medium-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.cormorant-garamond-semibold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.cormorant-garamond-semibold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.cormorant-garamond-bold {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.cormorant-garamond-bold-italic {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.raleway-regular {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.raleway-thin {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
 
 /* .cormorant-garamond {

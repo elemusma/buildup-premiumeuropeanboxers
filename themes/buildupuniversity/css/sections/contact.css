@@ -24,8 +24,9 @@ input.gform_button.button:hover {
 
 input,
 textarea {
-  box-shadow: inset 1px 1px 8px #eaeaea !important;
   border: none;
+  border-bottom: 2px solid #aca9a8;
+  background: transparent;
 }
 
 input[type=file] {
@@ -34,8 +35,13 @@ input[type=file] {
   border: none;
 }
 
+label {
+  color: black;
+  font-family: "proxima_novabold";
+}
+
 /* custom form */
-input,
+/* input,
 textarea {
   width: 100%;
   border: 1px solid #eaeaea;
@@ -63,7 +69,7 @@ button[type=submit] {
 
 button[type=submit]:hover {
   background: var(--accent-secondary);
-}
+} */
 
 input:focus-visible,
 textarea:focus-visible {
@@ -72,6 +78,6 @@ textarea:focus-visible {
 
 input::placeholder,
 textarea::placeholder {
-  /* color: red; */
   font-weight: 900;
+  color: black;
 }
